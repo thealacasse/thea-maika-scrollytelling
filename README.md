@@ -1,1 +1,1 @@
-# thea-maika-scrollytelling
+# PROJET SCROLLYTELLING : Les aventures de Smiley
