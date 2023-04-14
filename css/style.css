@@ -1,0 +1,116 @@
+:root {
+  --couleur-vert: #80c6b1;
+  --couleur-bleu: #6adae4;
+  --couleur-rose: #ffaeeb;
+  --couleur-jaune: #feedc3;
+  --couleur-mauve: #4e409b;
+  --couleur-saumon: #ff9191;
+  --couleur-bleu-pale: aliceblue;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100vw;
+  height: 108vh;
+  background-image: url(../img/img_personnages/couple.png);
+  background-color: var(--couleur-bleu);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 80px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding-top: 700px;
+}
+
+.icon-scroll {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #feedc3;
+  position: absolute;
+  right: 50%;
+}
+
+.container {
+  width: 100%;
+  height: 200vh;
+  background-color: aquamarine;
+}
+
+.chapitre1 {
+  background-image: url(../img/img_arriere_plan/chapitre1.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.chapitre2 {
+  background-image: url(../img/img_arriere_plan/chapitre2_ciel.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.chapitre3 {
+  background-image: url(../img/img_arriere_plan/chapitre3_ciel.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.chapitre4 {
+  background-image: url(../img/img_arriere_plan/chapitre4.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.chapitre5 {
+  background-image: url(../img/img_arriere_plan/ciel.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.chapitre6 {
+  background-image: url(../img/img_arriere_plan/ciel.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.chapitre7 {
+  background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.chapitre8 {
+  background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
