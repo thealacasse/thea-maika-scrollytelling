@@ -3,3 +3,9 @@
 ### Conception 
 * Théa Lacasse
 * Maïka Désy
+### Technologies
+* HTML
+* CSS
+* JavaScript
+* Librairie d'animation GSAP [Site Greensock](https://greensock.com/docs/v3/Installation#download)
+* Plugiciel ScrollTrigger
