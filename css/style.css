@@ -10,6 +10,7 @@
 
 body {
   overflow-x: hidden;
+  height: 800vh;
 }
 
 header {
@@ -115,10 +116,40 @@ footer {
 }
 
 .SpriteSheet {
-  background-image: url(../img/img_personnages/spritesheet.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  height: 422px;
+  width: 32072px;
+  background: url("../img/img_personnages/spritesheet.png");
   object-fit: contain;
+
+  animation: sprite 1s steps(76) infinite;
+  background-position: 0 0;
+}
+
+@keyframes sprite {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -7600% 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .SpriteSheet {
+    transform: scale(1);
+  }
+}
+
+#montagnePale {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#montagneSemiPale {
+  width: 100%;
+  height: 100%;
+}
+#montagneFonce {
   width: 100%;
   height: 100%;
 }
