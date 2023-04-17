@@ -45,18 +45,22 @@ footer {
   right: 50%;
 }
 
-.container {
-  width: 100%;
-  height: 200vh;
+.Chapitre {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: 1/1;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  top: 809px;
 }
-
 .chapitre1 {
   background-image: url(../img/img_arriere_plan/chapitre1.png);
   background-size: 100%;
   background-repeat: no-repeat;
   object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 1000px;
 }
 .chapitre2 {
   background-image: url(../img/img_arriere_plan/chapitre2_ciel.png);
@@ -64,7 +68,7 @@ footer {
   background-repeat: no-repeat;
   object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 1000px;
 }
 .chapitre3 {
   background-image: url(../img/img_arriere_plan/chapitre3_ciel.png);
@@ -72,7 +76,7 @@ footer {
   background-repeat: no-repeat;
   object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 1000px;
 }
 .chapitre4 {
   background-image: url(../img/img_arriere_plan/chapitre4.png);
@@ -80,7 +84,7 @@ footer {
   background-repeat: no-repeat;
   object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 1000px;
 }
 .chapitre5 {
   background-image: url(../img/img_arriere_plan/ciel.png);
@@ -88,7 +92,7 @@ footer {
   background-repeat: no-repeat;
   object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 1000px;
 }
 .chapitre6 {
   background-image: url(../img/img_arriere_plan/ciel.png);
@@ -96,7 +100,7 @@ footer {
   background-repeat: no-repeat;
   object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 1000px;
 }
 .chapitre7 {
   background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.png);
@@ -104,7 +108,7 @@ footer {
   background-repeat: no-repeat;
   object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 1000px;
 }
 .chapitre8 {
   background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.png);
@@ -112,24 +116,34 @@ footer {
   background-repeat: no-repeat;
   object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 1000px;
 }
 
 .SpriteSheet {
-  height: 422px;
-  width: 32072px;
-  background: url("../img/img_personnages/spritesheet.png");
+  height: 10%;
+  width: 40%;
+  background-image: url("../img/img_personnages/spritesheet.png");
   object-fit: contain;
-
+  background-size: 7600% 100%;
   animation: sprite 1s steps(76) infinite;
   background-position: 0 0;
+  animation-play-state: paused;
+}
+
+.is-scrolling {
+  height: 10%;
+  width: 40%;
+  background-size: 7600% 100%;
+  animation: sprite 1s steps(76) infinite;
+  object-fit: contain;
+  background-position: 0 0;
+  animation-play-state: running;
 }
 
 @keyframes sprite {
   from {
     background-position: 0 0;
   }
-
   to {
     background-position: -7600% 0;
   }
@@ -141,15 +155,128 @@ footer {
 }
 
 #montagnePale {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  max-width: 100vw;
+  max-height: 100vh;
+  position: absolute;
+  aspect-ratio: 1/1;
 }
 #montagneSemiPale {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  object-position: 0px;
 }
 #montagneFonce {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: inline;
+}
+
+#etoile1 {
+  bottom: 10px;
+  left: 100px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile2 {
+  bottom: 10px;
+  right: 200px;
+  object-position: 75% 75%;
+  position: relative;
+}
+#etoile3 {
+  bottom: -190px;
+  left: 300px;
+  object-position: 50% 50%;
+  position: relative;
+}
+#etoile4 {
+  bottom: -140px;
+  left: 500px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile5 {
+  bottom: -70px;
+  left: 20px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile6 {
+  bottom: -220px;
+  right: 200px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile7 {
+  bottom: -30px;
+  left: 450px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile8 {
+  bottom: 20px;
+  left: 100px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile9 {
+  bottom: -200px;
+  left: 950px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile10 {
+  bottom: -300px;
+  left: 300px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile11 {
+  bottom: -100px;
+  right: 50px;
+  object-position: 75% 75%;
+  position: relative;
+}
+#etoile12 {
+  bottom: -170px;
+  left: 1200px;
+  object-position: 50% 50%;
+  position: relative;
+}
+#etoile13 {
+  bottom: -100px;
+  left: 500px;
+  object-position: 100% 75%;
+  position: relative;
+}
+#etoile14 {
+  bottom: -200px;
+  left: 300px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile15 {
+  bottom: -900px;
+  right: 30px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile16 {
+  bottom: -10px;
+  left: 100px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile17 {
+  bottom: 20px;
+  left: 200px;
+  object-position: 105% 75%;
+  position: relative;
+}
+#etoile18 {
+  bottom: -100px;
+  left: 100px;
+  object-position: 105% 75%;
+  position: relative;
 }

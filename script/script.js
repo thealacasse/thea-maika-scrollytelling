@@ -1,26 +1,21 @@
-let lastKnownScrollPosition = 0;
-let ticking = false;
+const sprite = gsap.fromTo(
+  ".SpriteSheet",
+  {
+    x: "-600px",
+  },
+  { toggleActions: "restart complete reverse reset", x: "100px", duration: 10 }
+);
 
-function minuteur(scrollPos) {
-  window.setTimeout(minuteur, 100);
-
-  myVar = setTimeout(minuteur, 100);
-  clearTimeout(myVar);
-
-  setTimeout(function (minuteur) {
-    $("#square").removeClass("is-scrolling");
-  }, 100);
-}
-
-document.addEventListener("scroll", (event) => {
-  lastKnownScrollPosition = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      minuteur(lastKnownScrollPosition);
-      ticking = false;
-    });
-
-    ticking = true;
-  }
+let body = document.querySelector("body");
+window.addEventListener(
+  "scroll",
+  function () {
+    body.classList.add("is-crolling");
+    sprite.play();
+  },
+  100
+);
+const Minuteur = window.setInterval(function () {
+  body.classList.remove("is-scrolling");
+  sprite.pause();
 });
