@@ -1,104 +1,361 @@
 <!DOCTYPE html>
 <html>
-  <script src="script/script.js"></script>
-  <script src= "gsap-public/minified/gsap.min.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
-  
   <header>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
-        </style>
+
     <link rel="icon" type="image/x-icon" href="img/favicon.png" />
     <title>Les aventures de Smiley</title>
 
-    <h1> Les aventures de Smiley </h1> 
-    <div class="CTA">
-        <div class='icon-scroll'></div>
+    <h1>Les aventures de Smiley</h1>
+    <div class="para">
+      <p>
+        Projet créé dans le cadre du cours Optimisation Web - Intégration
+        multimédia - Collège Montmorency. © 2023 - Conception : Théa Lacasse et
+        Maïka Désy | Développement Web : Théa Lacasse.
+      </p>
     </div>
-    <footer>
-    <a>Projet créé dans le cadre du cours Optimisation Web - Intégration multimédia - Collège Montmorency. 
-        © 2023 - Conception : Théa Lacasse et Maïka Désy| Développement Web : Théa Lacasse. <a> <br> <br>
-        </footer>
-  </header>
-  <main>
-    <div class=" Chapitre container">
-        <section id="chapitre1" class ="chapitre1">
-        <h3> Chapitre 1 </h3>
-        </section> 
-    <section id="chapitre2" class ="chapitre2">
-        <h3> Chapitre 2 </h3>
-        <div class="Montagnes">
-            <img id="montagnePale" src="./img/img_arriere_plan/montagnePale.png" alt="montagne Pale">
-            <img id="montagneSemiPale" src="./img/img_arriere_plan/montageSemiPale.png" alt="montagne Semi Pale">
-            <img id="montagneFonce" src="./img/img_arriere_plan/montageFonce.png" alt="montagne Fonce">
-        </div>
-    </section>
-   
-    <section id="chapitre3"class ="chapitre3">
-        <h3> Chapitre 3 </h3>
-        <div class="Etoiles">
-            <img id="etoile1" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="30px">
-            <img id="etoile2" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="70px">
-            <img id="etoile3" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="30px">
-            <img id="etoile4" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="50px">
-            <img id="etoile5" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="80px">
-            <img id="etoile6" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="60px">
-            <img id="etoile7" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="30px">
-            <img id="etoile8" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="40px">
-            <img id="etoile9" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="30px">
-            <img id="etoile10" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="70px">
-            <img id="etoile11" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="30px">
-            <img id="etoile12" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="50px">
-            <img id="etoile13" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="80px">
-            <img id="etoile14" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="60px">
-            <img id="etoile15" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="30px">
-            <img id="etoile16" src="./img/img_arriere_plan/etoile.png" alt="etoile" width="40px">
-        </div>
-    </section>
-   
-    <section id="chapitre4" class ="chapitre4">
-        <h3> Chapitre 4 </h3>
-    </section>
-    
-    <section id="chapitre5" class ="chapitre5">
-        <h3> Chapitre 5 </h3>
-        <img id="nuage1" src="./img/img_arriere_plan/nuage.png" alt="nuage" width="450px">
-        <img id="nuage2" src="./img/img_arriere_plan/nuage.png" alt="nuage" width="300px">
-    </section>
-   
-    <section id="chapitre6" class ="chapitre6">
-        <h3> Chapitre 6 </h3>
-        <img id="nuage3" src="./img/img_arriere_plan/nuage.png" alt="nuage" width="300px">
-        <img id="nuage4" src="./img/img_arriere_plan/nuage.png" alt="nuage" width="450px">
-        <img id="nuage5" src="./img/img_arriere_plan/nuage.png" alt="nuage" width="500px">
-        <img id="oiseau" src="./img/img_personnages/oiseau.png" alt="oiseau" width="250px">
-    </section>
-   
-    <section id="chapitre7" class ="chapitre7">
-        <h3> Chapitre 7 </h3>
-            <img id="ballon" src="./img/img_personnages/ball.png" alt="ballon" width="700px">
-    </section>
-    
-    <section id="chapitre8" class ="chapitre8">
-        <h3> Chapitre 8 </h3>
-        <div class="Ballon">
-            <img id="ballonCoeur" src="./img/img_personnages/ballon_coeur.png" alt="ballon coeur" width="1500px">
-            <img id="eclat" src="./img/img_personnages/eclat.png" alt="ballon eclate" width="500px">
-        </div>
-    </section>
 
-   
+    <div id="wrapper">
+      <div id="wrapper-inner">
+        <div id="scroll-down">
+          <span class="arrow-down">
+            <!-- css generated icon -->
+          </span>
+          <span id="scroll-title"> Scroll down </span>
+        </div>
       </div>
+    </div>
 
+    <br />
+    <br />
+  </header>
 
+  <main>
+    <div class="container">
+      <section id="chapitre1" class="chapitre1">
+        <div class="ContainerSpriteSheet">
+          <div class="SpriteSheet"></div>
+        </div>
+        <h3>Chapitre 1</h3>
+        <br />
+        <br />
+        <br />
+        <a>
+          Il était une fois.... <br />
+          Un petit bonhomme nommé Smiley qui décida de partir en aventure
+          chercher un ami.
+        </a>
+        <br />
+        <br />
+        <h3>
+          PSSS.. Scroll vers la gauche ou la droite pour faire marcher Smiley!
+        </h3>
+      </section>
+      <section id="chapitre2" class="chapitre2">
+        <h3>Chapitre 2</h3>
+        <br />
+        <br />
+
+        <h4>
+          Smiley marcha pendant des heures, il se sentait libre, mais seul.
+          <br />
+          Il s'est dit qu'il allait arrêter de marcher seulement quand un
+          miracle va se passer!
+        </h4>
+
+        <img
+          id="montagneFonce"
+          src="./img/img_arriere_plan/montageFonce.png"
+          alt="montagne Fonce"
+        />
+        <img
+          id="montagneSemiPale"
+          src="./img/img_arriere_plan/montageSemiPale.png"
+          alt="montagne Semi Pale"
+        />
+
+        <img
+          id="montagnePale"
+          src="./img/img_arriere_plan/montagnePale.png"
+          alt="montagne Pale"
+        />
+        <img
+          id="PetitBonhommeNoir"
+          src="./img/img_personnages/petitBonhommeNoir.png"
+          alt=" Petit bonhomme Noir"
+        />
+      </section>
+
+      <section id="chapitre3" class="chapitre3">
+        <h3>Chapitre 3</h3>
+        <br />
+        <br />
+        <br />
+        <a>
+          Ne voyant pas les heures passer, Smiley marcha durant toute la nuit!
+          <br />
+          Smiley adore observer les étoiles!
+        </a>
+
+        <div id="etoiles"></div>
+        <div onscroll="doFade();"></div>
+
+        <img
+          id="etoile1"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="30px"
+        />
+        <img
+          id="etoile2"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="70px"
+        />
+        <img
+          id="etoile3"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="30px"
+        />
+        <img
+          id="etoile4"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="50px"
+        />
+        <img
+          id="etoile5"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="80px"
+        />
+        <img
+          id="etoile6"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="60px"
+        />
+        <img
+          id="etoile7"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="30px"
+        />
+        <img
+          id="etoile8"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="40px"
+        />
+        <img
+          id="etoile9"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="30px"
+        />
+        <img
+          id="etoile10"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="70px"
+        />
+        <img
+          id="etoile11"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="30px"
+        />
+        <img
+          id="etoile12"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="50px"
+        />
+        <img
+          id="etoile13"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="80px"
+        />
+        <img
+          id="etoile14"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="60px"
+        />
+        <img
+          id="etoile15"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="30px"
+        />
+        <img
+          id="etoile16"
+          src="./img/img_arriere_plan/etoile.png"
+          alt="etoile"
+          width="40px"
+        />
+        <img
+          id="PetitBonhomme"
+          src="./img/img_personnages/petit.png"
+          alt=" Petit bonhomme"
+        />
+      </section>
+
+      <section id="chapitre4" class="chapitre4">
+        <h3>Chapitre 4</h3>
+        <br />
+        <br />
+        <br />
+        <a>
+          Déjà rendu au lendemain, Smiley appercoit la fin du chemin. <br />
+          Il était curieux de voir à quoi ressemblait la vue à la fin du chemin,
+          donc s'approcha.<br />
+          Smiley TOMBA en bas de la falaise!
+        </a>
+        <img
+          class="regardeFalaise"
+          src="./img/img_personnages/regard.png"
+          alt="regarde falaise"
+          width="50%"
+        />
+      </section>
+
+      <section id="chapitre5" class="chapitre5">
+        <h3>Chapitre 5</h3>
+        <br /><br /><br />
+        <a>- AAAAAAAAHHH!!! Aidez-moi quelqu'un!!</a>
+        <div class="tombeAnim">
+          <img
+            class="tombe1"
+            src="./img/img_personnages/fall.png"
+            alt="tomber face devant"
+          />
+        </div>
+        <img
+          id="nuage1"
+          src="./img/img_arriere_plan/nuage.png"
+          alt="nuage"
+          width="450px"
+        />
+        <img
+          id="nuage2"
+          src="./img/img_arriere_plan/nuage.png"
+          alt="nuage"
+          width="300px"
+        />
+      </section>
+
+      <section id="chapitre6" class="chapitre6">
+        <h3>Chapitre 6</h3>
+        <br /><br /><br />
+        <a>
+          C'est alors qu'il apperçut un ballon qui flotte dans les airs. <br />
+          Smiley attrape le ballon!
+        </a>
+
+        <img
+          id="nuage3"
+          src="./img/img_arriere_plan/nuage.png"
+          alt="nuage"
+          width="300px"
+        />
+        <img
+          id="nuage4"
+          src="./img/img_arriere_plan/nuage.png"
+          alt="nuage"
+          width="450px"
+        />
+        <img
+          id="nuage5"
+          src="./img/img_arriere_plan/nuage.png"
+          alt="nuage"
+          width="500px"
+        />
+        <div class="ballonAnim">
+          <img
+            id="ballon"
+            src="./img/img_personnages/ball.png"
+            alt="ballon"
+            width="700px"
+          />
+        </div>
+        <div id="flotter"></div>
+        <div onscroll="doFade();"></div>
+        <img
+          id="flotte"
+          src="./img/img_personnages/flotte.png"
+          alt="face heureux flotte"
+        />
+        <img
+          id="tomber2"
+          src="./img/img_personnages/tomber.png"
+          alt="tomber face en haut"
+        />
+      </section>
+
+      <section id="chapitre7" class="chapitre7">
+        <h3>Chapitre 7</h3>
+        <br /><br /><br />
+        <a>
+          Smiley réussit à atterir tout en douceur grâce au ballon! <br />
+          Une fois par terre, il s'apperçut que les couleurs ne sont pas comme
+          celles de d'habitude? <br />
+          Il est atterit dans un nouveau monde!! <br />
+          Toujours en continuant de marcher, il vu un oiseau foncé non sur lui,
+          mais sur son beau ballon! <br />
+          POOF! Le ballon explose! Mystérieusement, celui-ci se retransforme en
+          un ballon ENCORE plus joli!
+        </a>
+        <div class="ContainerSpriteSheet2">
+          <div class="SpriteSheet2"></div>
+        </div>
+        <img
+          id="oiseau"
+          src="./img/img_personnages/oiseau.png"
+          alt="oiseau"
+          width="250px"
+        />
+
+        <img
+          id="eclat"
+          src="./img/img_personnages/eclat.png"
+          alt="ballon eclate"
+          width="500px"
+        />
+      </section>
+
+      <section id="chapitre8" class="chapitre8">
+        <h3>Chapitre 8</h3>
+        <br /><br /><br />
+        <a>
+          Il rencontra une amie comme lui et lui donna le ballon! Les deux amis
+          continuèrent leur aventure, heureux de s'avoir rencontré!</a
+        >
+        <img
+          id="amis"
+          src="./img/img_personnages/couple.png"
+          alt="amis"
+          width="500px"
+        />
+      </section>
+    </div>
   </main>
   <body>
+    <script src="gsap-public/src/gsap-core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+    <script src="script/script.js"></script>
   </body>
 </html>
