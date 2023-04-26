@@ -8,4 +8,4 @@
 * CSS
 * JavaScript
 * Librairie d'animation GSAP [Site Greensock](https://greensock.com/docs/v3/Installation#download)
-* Plugiciel ScrollTrigger
+* Plugiciel ScrollTrigger [Site Greensock plugin ScrollTrigger] (https://greensock.com/docs/v3/Installation?checked=core,scrollTrigger#CDN)
