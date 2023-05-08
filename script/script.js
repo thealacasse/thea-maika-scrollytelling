@@ -2,18 +2,68 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-const sprite = gsap.fromTo(
+const boddy = document.querySelector(".SpriteSheet");
+const sprite = gsap.to(
   ".SpriteSheet",
+
   {
-    x: "-600px",
-  },
-  {
-    toggleActions: "restart complete reverse reset",
-    x: "1000px",
-    duration: 10,
+    scrollTrigger: {
+      trigger: ".SpriteSheet",
+      markers: true,
+      pin: true,
+      start: "center 75%",
+      end: "bottom 25%",
+      toggleActions: "reset",
+      onUpdate(e) {
+        windows.addEventListener("scroll", function () {
+          boddy.classList.add("is-scrolling");
+
+          sprite.play();
+        });
+        window.setInterval(function () {
+          boddy.classList.remove("is-scrolling");
+        }, 100);
+      },
+      x: "1000px",
+      duration: 10,
+    },
   }
 );
 
+/*
+
+const boddy2 = document.querySelector(".SpriteSheet2");
+const sprite2 = gsap.to(
+  ".SpriteSheet2",
+
+  {
+    scrollTrigger: {
+      trigger: ".SpriteSheet2",
+      markers: true,
+      start: "center 75%",
+      end: "bottom 15%",
+      toggleActions: "reset",
+      onUpdate(e) {
+        windows.addEventListener("scroll", function () {
+          boddy2.classList.add("is-scrolling");
+
+          sprite2.play();
+        });
+        window.setInterval(function () {
+          boddy2.classList.remove("is-scrolling");
+        }, 100);
+      },
+      x: "1000px",
+      duration: 10,
+    },
+  }
+);
+
+
+*/
+
+/*
+const boddy2 = document.querySelector(".SpriteSheet2");
 const sprite2 = gsap.fromTo(
   ".SpriteSheet2",
   {
@@ -22,30 +72,28 @@ const sprite2 = gsap.fromTo(
   { toggleActions: "restart complete reverse reset", x: "1000px", duration: 10 }
 );
 
-const boddy = document.querySelector(".SpriteSheet");
-const boddy2 = document.querySelector(".SpriteSheet2");
-
 const tombe = gsap.to(".tombe1", { rotation: 1400, duration: 50, y: 500 });
 
 window.addEventListener("scroll", function () {
   boddy.classList.add("is-scrolling");
   boddy2.classList.add("is-scrolling2");
-  sprite.play();
-  sprite2.play();
-  tl.restart();
-  tombe.restart();
-  tl2.restart();
-  tl3.restart();
-  oiseauAnim.play();
+  /// sprite.play();
+  /// sprite2.play();
+  /// tl.restart();
+  ////tombe.restart();
+  ///tl2.restart();
+  ////tl3.restart();
+  ///oiseauAnim.play();
 });
 
 const Minuteur = window.setInterval(function () {
   boddy.classList.remove("is-scrolling");
   boddy2.classList.remove("is-scrolling2");
-  sprite.pause();
-  sprite2.pause();
-  oiseauAnim.pause();
+  /// sprite.pause();
+  /// sprite2.pause();
+  //oiseauAnim.pause();
 }, 100);
+*/
 
 //ANIMATIONS
 
@@ -66,10 +114,17 @@ function doFade() {
   tl.to(Etoiles, { opacity: 100, duration: 3, delay: 1 });
 }*/
 
+/*
+
 const tl = gsap
   .timeline({
-    paused: true,
+    paused: false,
     defaults: { duration: 0.3 },
+    trigger: ".chapitre3",
+    start: "top center",
+    end: "top top",
+    scrub: true,
+    markers: true,
   })
   .to("#etoile1", { opacity: 0 })
   .set("#etoile1", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
@@ -183,3 +238,4 @@ const AnimBallon = gsap.to(
     },
   }
 );
+*/

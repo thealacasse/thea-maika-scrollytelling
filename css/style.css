@@ -181,6 +181,7 @@ a {
 
   height: 1050px;
   position: relative;
+  border: solid 1px red;
 }
 .chapitre2 {
   background-image: url(../img/img_arriere_plan/chapitre2_ciel.png);
@@ -188,12 +189,14 @@ a {
   height: 1050px;
   background-repeat: no-repeat;
   position: relative;
+  border: solid 1px red;
 }
 .chapitre3 {
   background-image: url(../img/img_arriere_plan/chapitre3_ciel.png);
   height: 1050px;
   background-repeat: no-repeat;
   position: relative;
+  border: solid 1px red;
 }
 .chapitre4 {
   background-image: url(../img/img_arriere_plan/chapitre4.png);
@@ -201,6 +204,7 @@ a {
   height: 1050px;
   background-repeat: no-repeat;
   position: relative;
+  border: solid 1px red;
 }
 .chapitre5 {
   background-image: url(../img/img_arriere_plan/ciel.png);
@@ -215,6 +219,7 @@ a {
   height: 1050px;
   background-repeat: no-repeat;
   position: relative;
+  border: solid 1px red;
 }
 .chapitre7 {
   background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.png);
@@ -222,6 +227,7 @@ a {
   height: 1050px;
   background-repeat: no-repeat;
   position: relative;
+  border: solid 1px red;
 }
 .chapitre8 {
   background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.png);
@@ -229,6 +235,7 @@ a {
   height: 1050px;
   background-repeat: no-repeat;
   position: relative;
+  border: solid 1px red;
 }
 
 .SpriteSheet {
@@ -240,6 +247,7 @@ a {
   animation: sprite 1s steps(76) infinite;
   background-position: 0 0;
   animation-play-state: paused;
+  border: solid 1px red;
 }
 
 .is-scrolling {
@@ -334,90 +342,108 @@ a {
 #etoiles {
   color: #feedc300;
   background-color: #6adae400;
+  border: solid 1px greenyellow;
 }
 #etoile1 {
   bottom: 18vh;
   left: 15vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile2 {
   bottom: 20vh;
   left: 15vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile3 {
   bottom: 30vh;
   left: 10vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile4 {
   bottom: 40vh;
   left: 20vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile5 {
   bottom: 50vh;
   left: 23vw;
+  border: solid 1px greenyellow;
 }
 #etoile6 {
   bottom: 40vh;
   left: 40vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile7 {
   bottom: 30vh;
   left: 30vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile8 {
   bottom: 65vh;
   left: 65vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile9 {
   bottom: 60vh;
   left: 60vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile10 {
   bottom: 66vh;
   left: 10vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile11 {
   bottom: 70vh;
   left: 90vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile12 {
   bottom: 30vh;
   left: 59vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile13 {
   bottom: 19vh;
   left: 29vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile14 {
   bottom: 23vh;
   left: 39vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile15 {
   bottom: 40vh;
   left: 65vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile16 {
   bottom: 22vh;
   left: 34vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile17 {
   bottom: 28vh;
   left: 55vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #etoile18 {
   bottom: 15vh;
@@ -425,6 +451,7 @@ a {
   position: absolute;
   color: #feedc300;
   background-color: #6adae400;
+  border: solid 1px greenyellow;
 }
 
 #nuage1 {
@@ -433,6 +460,7 @@ a {
   position: absolute;
   color: #feedc300;
   background-color: #6adae400;
+  border: solid 1px greenyellow;
 }
 
 #nuage2 {
@@ -441,6 +469,7 @@ a {
   position: absolute;
   color: #feedc300;
   background-color: #6adae400;
+  border: solid 1px greenyellow;
 }
 #nuage3 {
   bottom: 60vh;
@@ -448,6 +477,7 @@ a {
   position: absolute;
   color: #feedc300;
   background-color: #6adae400;
+  border: solid 1px greenyellow;
 }
 
 #nuage4 {
@@ -456,6 +486,7 @@ a {
   position: absolute;
   color: #feedc300;
   background-color: #6adae400;
+  border: solid 1px greenyellow;
 }
 #nuage5 {
   bottom: 55vh;
@@ -463,17 +494,20 @@ a {
   position: absolute;
   color: #feedc300;
   background-color: #6adae400;
+  border: solid 1px greenyellow;
 }
 #oiseau {
   bottom: 35vh;
   left: 12vw;
 
   position: absolute;
+  border: solid 1px greenyellow;
 }
 #ballon {
   bottom: 15vh;
   left: 38vw;
   position: absolute;
+  border: solid 1px greenyellow;
 }
 /*#ballonCoeur {
   bottom: 5vh;
