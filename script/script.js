@@ -140,21 +140,18 @@ tl_etoile.fromTo(
 //
 // CHAPITRE 4   Fleur qui se dessine avec drawSVG
 
-/*
-  gsap.from(".flower", {
-    duration: 5,
-    drawSVG: "0%",
-    ease: "power1.inOut",
-    scrollTrigger: {
-      trigger: ".flower",
-      //markers: true,
-      scrub: 1,
-      start: "top center",
-      end: "bottom center",
-   
-    },
-  });
-  */
+gsap.from(".flower", {
+  duration: 5,
+  drawSVG: "0%",
+  ease: "power1.inOut",
+  scrollTrigger: {
+    trigger: ".flower",
+    //markers: true,
+    scrub: 1,
+    start: "top center",
+    end: "bottom center",
+  },
+});
 
 // CHAPITRE 5
 
@@ -233,24 +230,21 @@ const tl_animMarche = gsap
   .fromTo("#oiseau", { x: "-600px" }, { x: "1000px", duration: 5 }, "start");
 
 // CHAPITRE 8   MorfSVG
-/* 
+
 gsap.to("#rond", {
   duration: 5,
   scrollTrigger: {
     trigger: ".chapitre8",
-  markers: true,
-  toggleActions: "reset play complete play",
-  start: "top 25%",
-  end: "90% 90%",
-
+    markers: true,
+    toggleActions: "reset play complete play",
+    start: "top 25%",
+    end: "90% 90%",
   },
   morphSVG: {
     shape: "#coeur",
     shapeIndex: 5,
   },
 });
-
-*/
 
 function findShapeIndex(target, endShape, vars) {
   vars = vars || {};
