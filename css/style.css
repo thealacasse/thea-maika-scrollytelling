@@ -36,11 +36,18 @@ h1 {
 }
 h3,
 h4,
-a {
+p {
   padding: 25px;
   position: absolute;
   font-size: 30px;
   color: aliceblue;
+}
+
+h5 {
+  padding: 25px;
+  position: absolute;
+  font-size: 20px;
+  color: #000;
 }
 
 .para {
@@ -171,7 +178,7 @@ a {
 }
 
 .chapitre1 {
-  background-image: url(../img/img_arriere_plan/chapitre1.png);
+  background-image: url(../img/img_arriere_plan/chapitre1.jpg);
 
   background-repeat: no-repeat;
 
@@ -180,7 +187,7 @@ a {
   /*border: solid 1px red;*/
 }
 .chapitre2 {
-  background-image: url(../img/img_arriere_plan/chapitre2_ciel.png);
+  background-image: url(../img/img_arriere_plan/chapitre2_ciel.jpg);
 
   height: 1050px;
   background-repeat: no-repeat;
@@ -188,14 +195,14 @@ a {
   /*border: solid 1px red;*/
 }
 .chapitre3 {
-  background-image: url(../img/img_arriere_plan/chapitre3_ciel.png);
+  background-image: url(../img/img_arriere_plan/chapitre3_ciel.jpg);
   height: 1050px;
   background-repeat: no-repeat;
   position: relative;
   /*border: solid 1px red;*/
 }
 .chapitre4 {
-  background-image: url(../img/img_arriere_plan/chapitre4.png);
+  background-image: url(../img/img_arriere_plan/chapitre4.jpg);
 
   height: 1050px;
   background-repeat: no-repeat;
@@ -203,14 +210,14 @@ a {
   /*border: solid 1px red;*/
 }
 .chapitre5 {
-  background-image: url(../img/img_arriere_plan/ciel.png);
+  background-image: url(../img/img_arriere_plan/ciel.jpg);
 
   height: 1050px;
   background-repeat: no-repeat;
   position: relative;
 }
 .chapitre6 {
-  background-image: url(../img/img_arriere_plan/ciel.png);
+  background-image: url(../img/img_arriere_plan/ciel.jpg);
 
   height: 1050px;
   background-repeat: no-repeat;
@@ -218,7 +225,7 @@ a {
   /*border: solid 1px red;*/
 }
 .chapitre7 {
-  background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.png);
+  background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.jpg);
 
   height: 1050px;
   background-repeat: no-repeat;
@@ -226,7 +233,7 @@ a {
   /*border: solid 1px red;*/
 }
 .chapitre8 {
-  background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.png);
+  background-image: url(../img/img_arriere_plan/chapitre7-8_sans_coline.jpg);
 
   height: 1050px;
   background-repeat: no-repeat;
