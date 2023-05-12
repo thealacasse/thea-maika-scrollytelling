@@ -5,251 +5,252 @@ gsap.registerPlugin(MorphSVGPlugin);
 gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(MotionPathPlugin);
 
-const boddy = document.querySelector(".SpriteSheet");
-const sprite = gsap.fromTo(
+//    _____ _                 _ _               __
+//   / ____| |               (_) |             /_ |
+//   | |    | |__   __ _ _ __  _| |_ _ __ ___   | |
+//   | |    | '_ \ / _` | '_ \| | __| '__/ _ \  | |
+//   | |____| | | | (_| | |_) | | |_| | |  __/  | |
+//   \_____ |_| |_|\__,_| .__/|_|\__|_|  \___|  |_|
+//                     | |
+//                     |_|
+//
+// CHAPITRE 1  petit bnhomme qui avance avec le scroll (up ou down) et arrete si on ne scroll pas
+const petitBonhommeJaune = document.querySelector(".SpriteSheet");
+const animMarche = gsap.fromTo(
   ".SpriteSheet",
-
   {
     scrollTrigger: {
-      trigger: ".SpriteSheet",
-      //markers: true,
-      pin: true,
-      pinSpacing: false,
-      start: "top center",
-      end: "bottom bottom",
-      toggleActions: "restart pause resume pause",
+      trigger: ".chapitre1",
+      // markers: true,
+      // pin: ".chapitre1",
+      start: "50% bottom",
+      // strat:"top top",
+      //pin: true,
+      end: "bottom top",
       onUpdate: (e) => {
         window.addEventListener("scroll", function () {
-          boddy.classList.add("is-scrolling");
-          sprite.play();
+          petitBonhommeJaune.classList.add("is-scrolling");
+          animMarche.play();
         });
         window.setInterval(function () {
-          boddy.classList.remove("is-scrolling");
+          petitBonhommeJaune.classList.remove("is-scrolling");
+          animMarche.pause();
         }, 100);
       },
-      x: "-600px",
+      x: "-1000px",
     },
   },
-  { x: "1500px", duration: 20 }
+  { x: "1500px", duration: 30 }
 );
 
-/*
+//    _______  __    __       ___      .______    __  .___________..______       _______     ___
+//   /       ||  |  |  |     /   \     |   _  \  |  | |           ||   _  \     |   ____|   |__ \
+//   |  ,----'|  |__|  |    /  ^  \    |  |_)  | |  | `---|  |----`|  |_)  |    |  |__         ) |
+//   |  |     |   __   |   /  /_\  \   |   ___/  |  |     |  |     |      /     |   __|       / /
+//   |  `----.|  |  |  |  /  _____  \  |  |      |  |     |  |     |  |\  \---. |  |____     / /_
+//   \_______||__|  |__| /__/     \__\ | _|      |__|     |__|     | _| `.____| |_______|   |____|
+//
+// CHAPITRE 2 -  effet Parallaxe des 3 montagnes
 
-const boddy2 = document.querySelector(".SpriteSheet2");
-const sprite2 = gsap.to(
-  ".SpriteSheet2",
-
-  {
-    scrollTrigger: {
-      trigger: ".SpriteSheet2",
-      markers: true,
-      start: "center 75%",
-      end: "bottom 15%",
-      toggleActions: "reset",
-      onUpdate(e) {
-        windows.addEventListener("scroll", function () {
-          boddy2.classList.add("is-scrolling");
-
-          sprite2.play();
-        });
-        window.setInterval(function () {
-          boddy2.classList.remove("is-scrolling");
-        }, 100);
-      },
-      x: "1000px",
-      duration: 10,
-    },
-  }
-);
-
-
-*/
-
-/*
-const boddy2 = document.querySelector(".SpriteSheet2");
-const sprite2 = gsap.fromTo(
-  ".SpriteSheet2",
-  {
-    x: "-600px",
+const tlpara = gsap.timeline({
+  scrollTrigger: {
+    //pin: ".chapitre2",
+    trigger: ".chapitre2",
+    scrub: true,
+    start: "top 45%",
+    end: "bottom top",
+    //markers:true
   },
-  { toggleActions: "restart complete reverse reset", x: "1000px", duration: 10 }
-);
-
-const tombe = gsap.to(".tombe1", { rotation: 1400, duration: 50, y: 500 });
-
-window.addEventListener("scroll", function () {
-  boddy.classList.add("is-scrolling");
-  boddy2.classList.add("is-scrolling2");
-  /// sprite.play();
-  /// sprite2.play();
-  /// tl.restart();
-  ////tombe.restart();
-  ///tl2.restart();
-  ////tl3.restart();
-  ///oiseauAnim.play();
 });
 
-const Minuteur = window.setInterval(function () {
-  boddy.classList.remove("is-scrolling");
-  boddy2.classList.remove("is-scrolling2");
-  /// sprite.pause();
-  /// sprite2.pause();
-  //oiseauAnim.pause();
-}, 100);
-*/
+tlpara
+  .to(
+    "#montagneSemiPale",
+    {
+      x: -300,
+      duration: 5,
+    },
+    "-=5"
+  )
+  .to(
+    "#montagnePale",
+    {
+      x: 200,
+      duration: 5,
+    },
+    "-=5"
+  )
+  .to(
+    "#montagneFonce",
+    {
+      x: -100,
+      duration: 5,
+    },
+    "-=5"
+  );
 
-//ANIMATIONS
+//        )\.-.       .'(     /`-.      /`-.  .'(  .-,.-.,-.    /`-.   )\.---.        .---./(
+//      ,' ,-,_)  ,') \  )  ,' _  \   ,' _  \ \  ) ) ,, ,. (  ,' _  \ (   ,-._(      (_.-,   )
+//     (  .   _  (  '-' (  (  '-' (  (  '-' ( ) (  \( |(  )/ (  '-' (  \  '-,          ,-`  /
+//      ) '..' )  ) .-.  )  )   _  )  ) ,._.' \  )    ) \     ) ,_ .'   ) ,-`         _'-, (
+//     (  ,   (  (  ,  ) \ (  ,' ) \ (  '      ) \    \ (    (  ' ) \  (  ``-.        )`-'  )
+//      )/'._.'   )/    )/  )/    )/  )/        )/     )/     )/   )/   )..-.(        `._..(
+//
+// CHAPITRE 3 ANIMATIONS qui loop à l'infini une fois le trigger atteint
 
-/*const etoilesAnim = gsap.fromTo(
+const tl_etoile = gsap.timeline({
+  paused: false,
+  scrollTrigger: {
+    // pin: ".chapitre3",
+    toggleActions: "play none none none",
+    trigger: ".chapitre3",
+    //  markers: true,
+    start: "top center",
+    end: "bottom center",
+  },
+  repeat: -1,
+  repeatDelay: 2,
+});
+
+for (let i = 1; i <= 18; i++) {
+  tl_etoile.to("#etoile" + i, { opacity: 0 });
+  tl_etoile.set(
+    "#etoile" + i,
+    { backgroundColor: "#6adae400" },
+    { opacity: 1 },
+    "+=1"
+  );
+  tl_etoile.to("#etoile" + i, { opacity: 1 }, "+=1");
+}
+
+tl_etoile.fromTo(
   "#etoile1",
   {
     x: "-600px",
   },
-  { x: "1000px", duration: 5 }
+  { x: "1500px", duration: 5 }
 );
 
-function doFade() {
-  var tl = gsap.timeline();
-  var Etoiles = document.querySelector(".Etoiles");
-  tl.to(Etoiles, { opacity: 0, duration: 3 });
-  Etoiles.className = "red";
-
-  tl.to(Etoiles, { opacity: 100, duration: 3, delay: 1 });
-}*/
+//   _____ _                 _ _              _  _
+//  / ____| |__   __ _ _ __ (_) |_ _ __ __   | || |
+//  | |   | '_ \ / _` | '_ \| | __| '__/ _ \ | || |_
+//  | |___| | | | (_| | |_) | | |_| | |  __/ |__   _|
+//  \_____|_| |_| \__,_| ._/|_|\__|_|  \___|    |_|
+//                     |_|
+//
+// CHAPITRE 4   Fleur qui se dessine avec drawSVG
 
 /*
-
-const tl = gsap
-  .timeline({
-    paused: false,
-    defaults: { duration: 0.3 },
-    trigger: ".chapitre3",
-    start: "top center",
-    end: "top top",
-    scrub: true,
-    markers: true,
-  })
-  .to("#etoile1", { opacity: 0 })
-  .set("#etoile1", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile1", { opacity: 1 }, "+=1")
-
-  .to("#etoile8", { opacity: 0 })
-  .set("#etoile8", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile8", { opacity: 1 }, "+=1")
-
-  .to("#etoile3", { opacity: 0 })
-  .set("#etoile3", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile3", { opacity: 1 }, "+=1")
-
-  .to("#etoile5", { opacity: 0 })
-  .set("#etoile5", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile5", { opacity: 1 }, "+=1")
-
-  .to("#etoile14", { opacity: 0 })
-  .set("#etoile14", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile14", { opacity: 1 }, "+=1")
-
-  .to("#etoile2", { opacity: 0 })
-  .set("#etoile2", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile2", { opacity: 1 }, "+=1")
-
-  .to("#etoile10", { opacity: 0 })
-  .set("#etoile10", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile10", { opacity: 1 }, "+=1")
-
-  .to("#etoile7", { opacity: 0 })
-  .set("#etoile7", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile7", { opacity: 1 }, "+=1")
-
-  .to("#etoile15", { opacity: 0 })
-  .set("#etoile15", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile15", { opacity: 1 }, "+=1")
-
-  .to("#etoile4", { opacity: 0 })
-  .set("#etoile4", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile4", { opacity: 1 }, "+=1")
-
-  .to("#etoile9", { opacity: 0 })
-  .set("#etoile9", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile9", { opacity: 1 }, "+=1")
-
-  .to("#etoile11", { opacity: 0 })
-  .set("#etoile11", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile11", { opacity: 1 }, "+=1")
-
-  .to("#etoile6", { opacity: 0 })
-  .set("#etoile6", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile6", { opacity: 1 }, "+=1")
-
-  .to("#etoile13", { opacity: 0 })
-  .set("#etoile13", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile13", { opacity: 1 }, "+=1")
-
-  .to("#etoile16", { opacity: 0 })
-  .set("#etoile16", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile16", { opacity: 1 }, "+=1")
-
-  .to("#etoile12", { opacity: 0 })
-  .set("#etoile12", { backgroundColor: "#6adae400" }, { opacity: 1 }, "+=1")
-  .to("#etoile12", { opacity: 1 }, "+=1");
-
-const tl2 = gsap
-  .timeline({
-    paused: true,
-    defaults: { duration: 0.1 },
-  })
-  .to("#nuage2", { opacity: 0 })
-  .to("#nuage1", { y: -900, duration: 5, opacity: 0 })
-
-  .to("#nuage2", { opacity: 1 })
-  .to("#nuage2", { y: -900, duration: 4, opacity: 0 })
-
-  .to("#nuage3", { x: 0, x: 500, duration: 6, opacity: 0 })
-
-  .to("#nuage4", { x: 0, x: -500, duration: 7, opacity: 0 })
-
-  .to("#nuage5", { x: 0, x: 200, duration: 6, opacity: 0 });
-
-const tl3 = gsap
-  .timeline({
-    paused: true,
-    defaults: { duration: 1 },
-  })
-  .to("#tomber2", { opacity: 1, duration: 2, opacity: 0 })
-
-  .to("#flotte", { opacity: 1, duration: 3, opacity: 1 });
-
-const oiseauAnim = gsap.fromTo(
-  "#oiseau",
-  {
-    x: "-600px",
-  },
-  { x: "1000px", duration: 5 }
-);
-
-const AnimBallon = gsap.to(
-  "#ballon",
-
-  {
-    scale: 1.5,
+  gsap.from(".flower", {
     duration: 5,
-    toggleActions: "restart complete reverse reset",
+    drawSVG: "0%",
+    ease: "power1.inOut",
     scrollTrigger: {
-      trigger: "img",
+      trigger: ".flower",
+      //markers: true,
+      scrub: 1,
+      start: "top center",
+      end: "bottom center",
+   
+    },
+  });
+  */
 
-      start: "bottom bottom",
+// CHAPITRE 5
+
+const tl_tombe = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".chapitre5",
+    //markers: true,
+    start: "top 25%",
+    end: "bottom 50%",
+    toggleActions: "play complete reverse reset",
+  },
+});
+
+tl_tombe
+  .fromTo(
+    ".tombe1",
+    { y: -400 },
+    { rotation: 2400, duration: 5, y: 500 },
+    "start"
+  )
+  .to("#nuage1", { duration: 9, y: -800 }, "start")
+  .to("#nuage2", { duration: 5, y: -800 }, "start");
+
+// CHAPITRE 6   Ballon qui suit un motionPath
+gsap.to(
+  "#ballonPath",
+
+  {
+    scrollTrigger: {
+      trigger: ".chapitre6",
+      //markers: true,
+      scrub: 1,
+      start: "center center",
+      end: "bottom center",
+      //  pin: ".chapitre6",
+    },
+    motionPath: {
+      path: "#path",
+      align: "#path",
+      alignOrigin: [0.5, 0.5],
+      autoRotate: false,
     },
   }
 );
-*/
 
+const tl3 = gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".chapitre6",
+      scrub: 1,
+      start: "center center",
+      end: "bottom center",
+    },
+  })
+  .to("#tomber2", { opacity: 1, duration: 3, opacity: 0 })
+  .to("#flotte", { opacity: 1, duration: 5, opacity: 1 });
+
+// CHAPITRE 7  petit bonhomme qqui marche avec son ballon et oiseau qui vole
+
+const tl_animMarche = gsap
+  .timeline({
+    scrollTrigger: {
+      toggleActions: "play none none reset",
+      trigger: ".chapitre7",
+      start: "50% bottom",
+      end: "bottom top",
+      //   markers: true,
+    },
+  })
+  .fromTo(
+    ".SpriteSheet2",
+    { x: "-100px" },
+    { x: "1500px", duration: 30 },
+    "start"
+  )
+  .fromTo("#oiseau", { x: "-600px" }, { x: "1000px", duration: 5 }, "start");
+
+// CHAPITRE 8   MorfSVG
+/* 
 gsap.to("#rond", {
   duration: 5,
+  scrollTrigger: {
+    trigger: ".chapitre8",
+  markers: true,
+  toggleActions: "reset play complete play",
+  start: "top 25%",
+  end: "90% 90%",
+
+  },
   morphSVG: {
     shape: "#coeur",
     shapeIndex: 5,
   },
 });
+
+*/
 
 function findShapeIndex(target, endShape, vars) {
   vars = vars || {};
@@ -523,29 +524,3 @@ function findShapeIndex(target, endShape, vars) {
   incrementButton.addEventListener("click", _increment);
   decrementButton.addEventListener("click", _decrement);
 }
-
-gsap.from(".flower", {
-  duration: 5,
-  drawSVG: "0%",
-  ease: "power1.inOut",
-  scrollTrigger: {
-    trigger: ".flower",
-    markers: true,
-    scrub: 1,
-    start: "center center",
-    end: "bottom center",
-    pin: "#svg",
-  },
-});
-
-gsap.to("#Ballonn", {
-  duration: 10,
-  motionPath: {
-    path: "#path",
-    align: "#path",
-    alignOrigin: [0.5, 0.5],
-    autoRotate: false,
-  },
-});
-
-MotionPathHelper.create("#Ballonn");
