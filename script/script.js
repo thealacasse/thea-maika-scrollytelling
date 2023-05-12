@@ -1,8 +1,8 @@
 //SCROLLTRIGGER
 
 gsap.registerPlugin(ScrollTrigger);
-//gsap.registerPlugin(MorphSVGPlugin);
-//gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(MorphSVGPlugin);
+gsap.registerPlugin(DrawSVGPlugin);
 gsap.registerPlugin(MotionPathPlugin);
 
 //    _____ _                 _ _               __
@@ -139,7 +139,7 @@ tl_etoile.fromTo(
 //                     |_|
 //
 // CHAPITRE 4   Fleur qui se dessine avec drawSVG
-/*
+
 gsap.from(".flower", {
   duration: 5,
   drawSVG: "0%",
@@ -152,7 +152,7 @@ gsap.from(".flower", {
     end: "bottom center",
   },
 });
-*/
+
 // CHAPITRE 5
 
 const tl_tombe = gsap.timeline({
@@ -230,7 +230,7 @@ const tl_animMarche = gsap
   .fromTo("#oiseau", { x: "-600px" }, { x: "1000px", duration: 5 }, "start");
 
 // CHAPITRE 8   MorfSVG
-/*
+
 gsap.to("#rond", {
   duration: 5,
   scrollTrigger: {
@@ -244,7 +244,7 @@ gsap.to("#rond", {
     shape: "#coeur",
     shapeIndex: 5,
   },
-}); */
+});
 
 function findShapeIndex(target, endShape, vars) {
   vars = vars || {};
