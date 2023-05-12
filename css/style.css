@@ -165,7 +165,9 @@ a {
 .container {
   height: 100%;
   width: 1900px;
-
+  position: absolute;
+  color: #6adae4;
+  pointer-events: none;
   /*  position: relative;
   width: 100vw;
   height: 100vh;
@@ -587,22 +589,12 @@ a {
   object-fit: cover;
 }
 
-.ballonAnim {
-  height: 100vh;
-  width: 400px;
-  left: 995px;
-  top: -40px;
-  overflow: hidden;
-  position: absolute;
-}
-
 #ballonCoeur {
   height: 80vh;
   width: 70vw;
   position: absolute;
   left: 540px;
   top: 105px;
-  
 }
 
 #coeur {
@@ -620,4 +612,69 @@ svg {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 0% 50%;
+}
+
+#svgFlower {
+  position: absolute;
+  height: 15%;
+  width: 15%;
+  right: 520px;
+  bottom: 60px;
+}
+
+#Ballonn {
+  height: 45vh;
+  width: 35vw;
+  position: absolute;
+  left: -150px;
+  top: 150px;
+}
+
+#flotteBallon {
+  height: 100vh;
+  width: 100%;
+  border: 2px solid black;
+}
+
+p {
+  float: left;
+  z-index: 999;
+}
+
+#Ballonn {
+  z-index: 999;
+}
+
+#motionPath {
+  height: 100%;
+  max-width: 100%;
+  overflow: visible;
+  bottom: 30px;
+  right: 0;
+}
+
+#motionPath path {
+  stroke-width: 2;
+  stroke: rgba(128, 128, 128, 0);
+}
+
+ul.technique-gsap {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 400;
+  width: auto;
+  display: inline-block;
+  padding: 10px 20px 12px 20px;
+  margin: 0;
+  max-width: 300px;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+ul.technique-gsap li {
+  margin: 5px 0;
 }

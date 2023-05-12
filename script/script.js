@@ -3,6 +3,7 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MorphSVGPlugin);
 gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(MotionPathPlugin);
 
 const boddy = document.querySelector(".SpriteSheet");
 const sprite = gsap.fromTo(
@@ -17,20 +18,19 @@ const sprite = gsap.fromTo(
       start: "top center",
       end: "bottom bottom",
       toggleActions: "restart pause resume pause",
-      onUpdate:(e) => {
+      onUpdate: (e) => {
         window.addEventListener("scroll", function () {
           boddy.classList.add("is-scrolling");
           sprite.play();
         });
         window.setInterval(function () {
           boddy.classList.remove("is-scrolling");
-
         }, 100);
       },
       x: "-600px",
     },
   },
-  {  x: "1500px", duration: 20 }
+  { x: "1500px", duration: 20 }
 );
 
 /*
@@ -243,8 +243,6 @@ const AnimBallon = gsap.to(
 );
 */
 
-
-
 gsap.to("#rond", {
   duration: 5,
   morphSVG: {
@@ -252,7 +250,6 @@ gsap.to("#rond", {
     shapeIndex: 5,
   },
 });
-
 
 function findShapeIndex(target, endShape, vars) {
   vars = vars || {};
@@ -527,14 +524,28 @@ function findShapeIndex(target, endShape, vars) {
   decrementButton.addEventListener("click", _decrement);
 }
 
-gsap.to("section-parallax", {
-  backgroundPosition: "100% 50%",
-  ease: "none",
+gsap.from(".flower", {
+  duration: 5,
+  drawSVG: "0%",
+  ease: "power1.inOut",
   scrollTrigger: {
-    trigger: "#section-parallax",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true,
+    trigger: ".flower",
     markers: true,
+    scrub: 1,
+    start: "center center",
+    end: "bottom center",
+    pin: "#svg",
   },
 });
+
+gsap.to("#Ballonn", {
+  duration: 10,
+  motionPath: {
+    path: "#path",
+    align: "#path",
+    alignOrigin: [0.5, 0.5],
+    autoRotate: false,
+  },
+});
+
+MotionPathHelper.create("#Ballonn");

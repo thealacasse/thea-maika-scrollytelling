@@ -3,10 +3,9 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    
   </head>
 
-<header>
+  <header>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,9 +13,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
 
     <link rel="icon" type="image/x-icon" href="img/favicon.png" />
     <title>Les aventures de Smiley</title>
@@ -52,19 +50,28 @@
           <div class="SpriteSheet"></div>
         </div>
         <h3>Chapitre 1</h3>
+        <ul class="technique-gsap">
+          <li>ScrollTrigger</li>
+          <li>SpriteSheet</li>
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger=</li>
+              <li>chapitre1</li>
+            </ul>
+          </li>
+        </ul>
         <br />
         <br />
         <br />
         <a>
           Il était une fois.... <br />
-          Un petit bonhomme nommé Smiley qui décida de partir en aventure
-          chercher un ami.
+          Un petit bonhomme nommé Smiley qui décida de partir en aventure pour
+          se trouver un ami.
         </a>
         <br />
         <br />
-        <h3>
-          PSSS.. Scroll vers la gauche ou la droite pour faire marcher Smiley!
-        </h3>
+        <h3></h3>
       </section>
       <section id="chapitre2" class="chapitre2">
         <h3>Chapitre 2</h3>
@@ -72,12 +79,22 @@
         <br />
 
         <h4>
-          Smiley marcha pendant des heures, il se sentait libre, mais seul.
+          Smiley marcha pendant des heures, jusqu'au coucher de soleil!
           <br />
           Il s'est dit qu'il allait arrêter de marcher seulement quand un
           miracle va se passer!
         </h4>
+        <ul class="technique-gsap">
+          <li>Parallax</li>
 
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger=</li>
+              <li>chapitre2</li>
+            </ul>
+          </li>
+        </ul>
         <img
           id="montagneFonce"
           src="./img/img_arriere_plan/montageFonce.png"
@@ -107,6 +124,17 @@
         <br />
         <br />
         <br />
+        <ul class="technique-gsap">
+          <li>Fondu enchaîné</li>
+
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger=</li>
+              <li>chapitre3</li>
+            </ul>
+          </li>
+        </ul>
         <a>
           Ne voyant pas les heures passer, Smiley marcha durant toute la nuit!
           <br />
@@ -224,11 +252,22 @@
         <br />
         <br />
         <br />
+        <ul class="technique-gsap">
+          <li>DrawSVG</li>
+
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger=</li>
+              <li>fleur</li>
+            </ul>
+          </li>
+        </ul>
         <a>
           Déjà rendu au lendemain, Smiley appercoit la fin du chemin. <br />
           Il était curieux de voir à quoi ressemblait la vue à la fin du chemin,
           donc s'approcha.<br />
-          Smiley TOMBA en bas de la falaise!
+          Soudaint, une fleur pousse et le fait tomber de la falaise!
         </a>
         <img
           class="regardeFalaise"
@@ -236,11 +275,32 @@
           alt="regarde falaise"
           width="50%"
         />
+        <svg id="svgFlower" viewBox="0 0 390 390">
+          <path
+            class="flower"
+            fill="none"
+            stroke="#000"
+            stroke-width="2"
+            d="M201.22 102.42c4.2-3.08 8.6-6.42 10.55-11.25 1.52-3.74 1.37-8 2.75-11.76 2.09-5.76 7.29-9.68 11.53-14.11s7.82-10.76 5.59-16.47l-16.74 4.65a16.33 16.33 0 00-4.81 1.9c-3.43 2.29-4.59 6.74-5.25 10.81a104.61 104.61 0 00-.15 32.66c3.83-2.33 5.45-7.11 5.7-11.59.55-10-4.29-20-2.17-29.83 1.59-7.3 6.95-13.8 6.52-21.26a6.11 6.11 0 00-1.13-3.53c-2-2.44-6.12-1.5-8.31.77s-3.21 5.39-5 8c-3.82 5.42-10.55 7.74-16.65 10.33s-12.56 6.43-14.21 12.85c-1.81 7.07 3 14.09 8.25 19.17a79.2 79.2 0 0024.05 16 468.85 468.85 0 01-6.3-56.56c-.23-4.5-.49-9.3-3.15-12.95a21 21 0 01-11.44 7.13 23.85 23.85 0 00-4.75 1.23c-3.26 1.48-5 4.93-7 7.93a42.77 42.77 0 01-16.79 14.89c-3.31 1.64-6.94 2.91-9.52 5.55s-3.68 7.27-1.15 10a9.37 9.37 0 003.74 2.02c6.46 2.32 13.37 3.07 20 4.7a78.46 78.46 0 0135.94 19.92q-17.52 8-35.5 15a13.85 13.85 0 01-5.43 1.29 4.73 4.73 0 01-4.4-2.92c-1.09-3.45 3.31-6.22 3.94-9.79.52-3-1.65-6.2-.32-8.91a6.31 6.31 0 013.39-2.66 17.71 17.71 0 0111.6-.7c2.47.7 4.75 1.94 7.18 2.78 6.57 2.28 13.75 1.57 20.67.84-6.23 6.58-16.34 7.54-25.37 6.8s-18.25-2.75-27-.56c-2.3.58-4.57 1.43-6.93 1.44s-5-1.09-5.79-3.31c-.77-2 .14-4.33 1.57-5.94a37.84 37.84 0 015-4 23.25 23.25 0 007.15-9.46c1.85-4.5 2.29-9.56 4.74-13.77 1.92-3.3 4.94-5.8 7.91-8.21 3.46-2.8 7.54-5.75 11.93-5s7.34 5 9.23 9.15c4.26 9.24 6.25 19.65 12.38 27.77 4.08 5.4 9.88 9.62 12.6 15.83 1.46 3.32 1.92 7 2.49 10.57a147.64 147.64 0 003.87 17.4c2.07 7.24 5.25 15 6 21.53s3.1 25.09 3.1 31.29 4.13 32.22 4.17 40.26c.12 24.89 0 50-4.82 74.38S209.9 353.05 192.62 371c5.15-11.92 4.65-25.41 4.07-38.38-.39-8.72-.79-17.48-2.61-26-2.18-10.25-6.38-20-7.92-30.39-1.55-10.54-.3-21.39-2.33-31.85a51.76 51.76 0 00-15.38-27.75c16.41 4.82 26.54 20.8 35.16 35.58 3.46 5.92 6.95 11.93 8.74 18.55 1.56 5.8 1.76 11.86 1.71 17.86a234.15 234.15 0 01-4.21 42.59c-.49 2.59-2.28 5.92-4.75 5l10.65-54c2.87-14.55 5.81-29.32 12.66-42.47 7.81-15 20.23-27 32.89-38.19 12-10.63 26.51-21.42 42.43-19.37A67.76 67.76 0 00269 217.92c-4.46 10.86-6 22.65-7.65 34.27-1.5 10.45-3.18 21-6.92 30.84s-9.72 19.17-18.39 25.2"
+          />
+        </svg>
       </section>
 
       <section id="chapitre5" class="chapitre5">
         <h3>Chapitre 5</h3>
         <br /><br /><br />
+        <ul class="technique-gsap">
+          <li>Déplacement position</li>
+          <li>Rotation</li>
+
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger=</li>
+              <li>chapitre5</li>
+            </ul>
+          </li>
+        </ul>
         <a>- AAAAAAAAHHH!!! Aidez-moi quelqu'un!!</a>
         <div class="tombeAnim">
           <img
@@ -266,10 +326,44 @@
       <section id="chapitre6" class="chapitre6">
         <h3>Chapitre 6</h3>
         <br /><br /><br />
+        <ul class="technique-gsap">
+          <li>MotionPath</li>
+          <li>Fondu</li>
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger=</li>
+              <li>chapitre6</li>
+            </ul>
+          </li>
+        </ul>
         <a>
-          C'est alors qu'il apperçut un ballon qui flotte dans les airs. <br />
-          Smiley attrape le ballon!
+          C'est alors qu'il apperçut un ballon qui flotte dans les airs! <br />
+          Mais le vent a emporté le ballon trop vite.
         </a>
+        <div id="flotteBallon">
+          <div class="container">
+            <p></p>
+            <img
+              id="Ballonn"
+              src="/img/img_personnages/ball.png"
+              width="100px"
+              height="120px"
+            />
+          </div>
+
+          <svg
+            id="motionPath"
+            viewBox="-20 0 557 190"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="path"
+              fill="none"
+              d="M8,102 C15,83 58,25 131,24 206,24 233,63 259,91 292,125 328,155 377,155 464,155 497,97 504,74"
+            />
+          </svg>
+        </div>
 
         <img
           id="nuage3"
@@ -290,12 +384,12 @@
           width="500px"
         />
         <div class="ballonAnim">
-          <img
+          <!--<img
             id="ballon"
             src="./img/img_personnages/ball.png"
             alt="ballon"
             width="700px"
-          />
+          />-->
         </div>
         <div id="flotter"></div>
         <div onscroll="doFade();"></div>
@@ -314,15 +408,25 @@
       <section id="chapitre7" class="chapitre7">
         <h3>Chapitre 7</h3>
         <br /><br /><br />
+        <ul class="technique-gsap">
+          <li>ScrollTrigger</li>
+          <li>SpriteSheet</li>
+          <li>Déplacement posistion</li>
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger=</li>
+              <li>chapitre7</li>
+            </ul>
+          </li>
+        </ul>
         <a>
-          Smiley réussit à atterir tout en douceur grâce au ballon! <br />
+          Smiley réussit à atterir docemnet et remarque qu'il a le ballon dans
+          sa main! <br />
           Une fois par terre, il s'apperçut que les couleurs ne sont pas comme
           celles de d'habitude? <br />
           Il est atterit dans un nouveau monde!! <br />
-          Toujours en continuant de marcher, il vu un oiseau foncé non sur lui,
-          mais sur son beau ballon! <br />
-          POOF! Le ballon explose! Mystérieusement, celui-ci se retransforme en
-          un ballon ENCORE plus joli!
+          <br />
         </a>
         <div class="ContainerSpriteSheet2">
           <div class="SpriteSheet2"></div>
@@ -333,21 +437,25 @@
           alt="oiseau"
           width="250px"
         />
-
-        <img
-          id="eclat"
-          src="./img/img_personnages/eclat.png"
-          alt="ballon eclate"
-          width="500px"
-        />
       </section>
 
       <section id="chapitre8" class="chapitre8">
         <h3>Chapitre 8</h3>
         <br /><br /><br />
+        <ul class="technique-gsap">
+          <li>Morphing</li>
+
+          <li>
+            scrollTrigger
+            <ul>
+              <li>trigger=</li>
+              <li>chapitre8</li>
+            </ul>
+          </li>
+        </ul>
         <a>
-          Il rencontra une amie comme lui et lui donna le ballon! Les deux amis
-          continuèrent leur aventure, heureux de s'avoir rencontré!</a
+          Smiley fini par se trouver une amie et les deux continuèrent leur
+          aventure, heureux de s'avoir rencontré!</a
         >
         <img
           id="amis"
@@ -357,27 +465,26 @@
         />
 
         <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="153"
-        height="174"
-        viewBox="0 0 153 174"
-        fill="none"
-      >
-        <g id="morph">
-          <path
-            id="coeur"
-            d="M70 174C131.667 92.9999 217 -47.9997 77 32C-60 -46.9997 18.071 92.5344 70 174Z"
-            fill="#EB7474"
-          />
+          xmlns="http://www.w3.org/2000/svg"
+          width="153"
+          height="174"
+          viewBox="0 0 153 174"
+          fill="none"
+        >
+          <g id="morph">
+            <path
+              id="coeur"
+              d="M70 174C131.667 92.9999 217 -47.9997 77 32C-60 -46.9997 18.071 92.5344 70 174Z"
+              fill="#EB7474"
+            />
 
-          <path
-            id="rond"
-            d="M72 173C95 173 122 140 122 96C122 52 102 3.00004 72 1.00004C42 -0.999963 21 46 21 89C21 152 55 173 72 173Z"
-            fill="#EB7474"
-          />
-        </g>
-      </svg>
-
+            <path
+              id="rond"
+              d="M72 173C95 173 122 140 122 96C122 52 102 3.00004 72 1.00004C42 -0.999963 21 46 21 89C21 152 55 173 72 173Z"
+              fill="#EB7474"
+            />
+          </g>
+        </svg>
       </section>
     </div>
   </main>
@@ -387,6 +494,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script>
     <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
     <script src="script/script.js"></script>
   </body>
 </html>
