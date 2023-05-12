@@ -27,3 +27,7 @@ Je dois les compresser un peu afin que le site soit plus vite à charger et les 
 Je vais faire une action Photoshop et réduire la lourdeur des backgrounds image qui elles sont initialement en png, je vais les mettre en jpg
 ### RÉSULTAT
 J'ai réussi à résoudre le problème. J'ai convertis toutes les backgrounds image que j'avais avec l'aide de Photoshop, je l'ai est exporté en Web, puis ça a grandement changé la lourdeur de l'image!
+
+
+## Rapport projet ScrollyTelling après optimisation
+[Page Speed Insights - Rapport du 12 mai 2023, 00:01:51](https://pagespeed.web.dev/analysis/https-thealacasse-github-io-thea-maika-scrollytelling/myapp6hhua?form_factor=desktop) 
