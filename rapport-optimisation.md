@@ -3,15 +3,15 @@
 
 ## PROBLÈME 1
 ### Mes documents n'ont pas de meta description
-Si ma page étais pour être publié au grand public, elle serait loin dans le moteur de recherche puisque je n'ai pas mit des meta data.
+Si ma page étais pour être publié au grand public, elle serait loin dans le moteur de recherche puisque je n'ai pas mit des meta data
 ### ACTION CONCRÈTE POUR RÉSOUDRE LE PROBLÈME :
-Je vais ajouter des meta description dan sma page HTML pour décrir mon site, afin qu'il se fasse plus valoir s'il était pour être publié.
+Je vais ajouter des meta description dan sma page HTML pour décrir mon site, afin qu'il se fasse plus valoir s'il était pour être publié
 
 
 
 ## PROBLÈME 2
 ### Liens non navigables
-On s'attend a avoir un lien lorsqu'on met une balise de type <a>.
+On s'attend a avoir un lien lorsqu'on met une balise de type «a»
 ### ACTION CONCRÈTE POUR RÉSOUDRE LE PROBLÈME :
 J'ai utilisé des balises de type «a» pour mes phrases, mais puisque je n'ai pas de liens Internet, donc je dois remplacer les balises de type «a» par «p»
   
