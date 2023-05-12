@@ -19,6 +19,6 @@ J'ai utilisé des balises de type «a» pour mes phrases, mais puisque je n'ai p
   
 ## PROBLÈME 3
 ### Mes backgrounds images sont un peu lourds
-Je dois les compresser un peu afin que le site soit plus vite à charger
+Je dois les compresser un peu afin que le site soit plus vite à charger et les images les plus lourdes sont mes backgrounds image
 ### ACTION CONCRÈTE POUR RÉSOUDRE LE PROBLÈME :
-Je vais faire une action Photoshop et réduire la lourdeur de l'image
+Je vais faire une action Photoshop et réduire la lourdeur des backgrounds image qui elles sont initialement en png, je vais les mettre en jpg
