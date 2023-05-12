@@ -13,7 +13,7 @@ Je vais ajouter des meta description dan sma page HTML pour décrir mon site, af
 ### Liens non navigables
 On s'attend a avoir un lien lorsqu'on met une balise de type <a>.
 ### ACTION CONCRÈTE POUR RÉSOUDRE LE PROBLÈME :
-J'ai utilisé des balises de type <a> pour mes phrases, mais puisque je n'ai pas de liens Internet, donc je dois remplacer les balises de type <a> par <p>.
+J'ai utilisé des balises de type <a> pour mes phrases, mais puisque je n'ai pas de liens Internet, donc je dois remplacer les balises de type <a> par <p>
   
   
   
